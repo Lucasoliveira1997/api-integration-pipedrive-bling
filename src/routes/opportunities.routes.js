@@ -9,7 +9,7 @@ const { Router } = require('express')
 const route = Router()
 
 route.get('/', async (req, resp) => {
-    const opportunities =  await axios.get(`https://${environment.pipedriveAcess.user}.pipedrive.com/api/v1/deals:${environment.pipedriveAcess.properties}?api_token=${environment.pipedriveAcess.api_token}`)
+    const opportunities =  await axios.get(`https://${environment.pipedriveAccess.user}.pipedrive.com/api/v1/deals:${environment.pipedriveAccess.properties}?api_token=${environment.pipedriveAccess.token}`)
     const opportunitiesWon = opportunities.data.data.filter(opportunity => opportunity.status == "won")
     
     return resp.json(opportunitiesWon)
