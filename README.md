@@ -1,7 +1,5 @@
 # Pipedrive and Bling Integration
 
-[Context] | [Technologies] | [Executing] 
-
 ### API Flow
 ![](fluxo_api.JPG)
 
