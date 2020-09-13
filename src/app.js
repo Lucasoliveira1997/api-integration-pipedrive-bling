@@ -20,8 +20,10 @@ mongoose.connection.on('error', () => console.log('Database connection Failed'))
 
 //importing routes/endpoints
 const opportunitiesRoutes = require('./routes/opportunities.routes')
+const ordersRoutes = require('./routes/orders.routes')
 
 //Applying route with all HTTP methods
 app.use('/opportunities', opportunitiesRoutes)
+app.use('/orders', ordersRoutes)
 
 module.exports = app
